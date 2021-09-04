@@ -66,9 +66,15 @@
     padding: 0.5rem 0;
     font-size: 0.8em;
 }
+#pc{
+    display: none;
+}
 .yt-vid iframe, video{
     width: 300px;
     height: 170px;
+}
+.content-img{
+    max-width: 90%;
 }
 .desc{
     padding-top: 1rem;
@@ -80,43 +86,24 @@
     100% { opacity: 0.3; }
 }
 @media (min-width: 480px){
-    :root{
-        font-size: 17px;
-    }
-    *{
-        position:relative;
-    }
     #content{
-        --text-main: white;
-        color: var(--text-main);
-        background: url(Assets/OrionLogo.jpeg) no-repeat center center fixed;
-        background-size: cover;
-        height: 100%;
-        overflow: hidden;
-        position: relative;
-        grid-template-rows: auto 1fr auto;
-    }
-    #content::before {
-        content: "";
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-    #header-img{
         display: none;
     }
-    #footer{
-        /* color: black; */
-        width: 100%;
-        background-color: rgba(0,0,0,0.5);
+    #pc{
+        display: block;
+        background-color: var(--bg-color);
+        width: 100vw;
+        height: 100vh;
     }
-}
-
-@media (min-width: 769px){
-    :root{
-        font-size: 20px;
+    .container{
+        width: clamp(300px, 90%, 600px);
+        padding: 1rem 0;
+        margin: 0 auto;
+        height: 100%;
+    }
+    .pc-yt iframe{
+        margin: 0 auto;
+        width: 600px;
+        height: 340px;
     }
 }

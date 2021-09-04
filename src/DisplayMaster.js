@@ -7,6 +7,9 @@ function renderContent(contentObject) {
     if (contentObject.url) {
         main.innerHTML += `<video width="320" height="240" autoplay><source src="${contentObject.url}" type="video/mp4">Your browser does not support the video tag.</video>`;
     }
+    if (contentObject.image) {
+        main.innerHTML += `<img class="content-img" src="${contentObject.image}">`
+    }
     main.innerHTML += `<div class="desc">${contentObject.desc}</div>`;
 }
 
